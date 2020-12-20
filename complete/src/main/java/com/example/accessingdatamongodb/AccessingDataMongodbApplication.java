@@ -8,7 +8,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class AccessingDataMongodbApplication implements CommandLineRunner {
+public class AccessingDataMongodbApplication  {
 
 	@Autowired
 	private CustomerRepository repository;
@@ -17,14 +17,14 @@ public class AccessingDataMongodbApplication implements CommandLineRunner {
 		SpringApplication.run(AccessingDataMongodbApplication.class, args);
 	}
 
-	@Override
+	/*@Override
 	public void run(String... args) throws Exception {
 
 		repository.deleteAll();
 
 		// save a couple of customers
-		repository.save(new Customer("Alice", "Smith"));
-		repository.save(new Customer("Bob", "Smith"));
+		//repository.save(new Customer("Alice", "Smith"));
+		//repository.save(new Customer("Bob", "Smith"));
 
 		// fetch all customers
 		System.out.println("Customers found with findAll():");
@@ -47,6 +47,6 @@ public class AccessingDataMongodbApplication implements CommandLineRunner {
 		.filter(cust -> cust.getFirstName()=="Bob")
 		.forEach(System.out::println);
 
-	}
+	}*/
 
 }

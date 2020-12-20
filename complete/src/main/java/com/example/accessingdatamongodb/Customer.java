@@ -1,5 +1,8 @@
 package com.example.accessingdatamongodb;
 
+import java.sql.Date;
+import java.time.LocalDate;
+
 import org.springframework.data.annotation.Id;
 
 
@@ -10,12 +13,56 @@ public class Customer {
 
 	public String firstName;
 	public String lastName;
+	public String email;
+	public String company;
+	public Integer phone;
+	public LocalDate created_date;
+	
+	
+	
+	public String getEmail() {
+		return email;
+	}
 
-	public Customer() {}
+	public String getCompany() {
+		return company;
+	}
+
+	public Integer getPhone() {
+		return phone;
+	}
+
+	public LocalDate getCreated_date() {
+		return created_date;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public void setCompany(String company) {
+		this.company = company;
+	}
+
+	public void setPhone(Integer phone) {
+		this.phone = phone;
+	}
+
+	public void setCreated_date(LocalDate created_date) {
+		this.created_date = created_date;
+	}
+
+
+	
+
+	public Customer() {
+		this.created_date=LocalDate.now();
+	}
 
 	public Customer(String firstName, String lastName) {
 		this.firstName = firstName;
 		this.lastName = lastName;
+		
 	}
 
 	public String getId() {
