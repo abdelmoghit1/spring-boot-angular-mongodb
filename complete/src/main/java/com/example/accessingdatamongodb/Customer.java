@@ -16,6 +16,8 @@ public class Customer {
 	public String email;
 	public String company;
 	public Integer phone;
+	public String link;
+	
 	public LocalDate created_date;
 	
 	
@@ -87,6 +89,14 @@ public class Customer {
 
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
+	}
+
+	public String getLink() {
+		return link;
+	}
+
+	public void setLink(String link) {
+		this.link = link;
 	}
 
 	@Override
