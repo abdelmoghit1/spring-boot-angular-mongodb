@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sringboot-mongodb-deployment
+spec:
+  replicas: 2
+  selector:
+      matchLabels:
+        app: springboot-mongodb
+  template:
+    metadata:
+      labels:
+        app: springboot-mongodb
+    spec:
+      containers:
+      - name: springboot-mongodb
+        image: abdel1983/hakubeapp:springboot-mongodb
+        ports:
+        - containerPort: 8080
